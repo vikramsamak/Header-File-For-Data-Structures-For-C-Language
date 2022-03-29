@@ -45,8 +45,7 @@ void stackdisplay()
     }  
 }
 void search(int val)
-{
-    int a;
+int a,flag;
     
    for(a=-1;a<=top;a++)
     {
@@ -54,7 +53,13 @@ void search(int val)
         if(stack[a]==val)
         {
             printf("\n%d Found At Index %d\n" ,stack[a],a);
+            flag=1;
         }  
         
     }
+    if (flag!=1)
+    {
+        printf("\nGiven Is Element Not Present In The Stack");
+    }
+    printf("\n");
 }
